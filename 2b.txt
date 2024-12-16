@@ -54,7 +54,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本
  --Properties:
 
 local ui = loadstring(game:HttpGet("https://pastebin.com/raw/Z4yW42iP"))()
-local win = ui:new("羊脚本")
+local win = ui:new("羊脚本pro")
 
 local UITab1 = win:Tab("『公告』",'7734068321')
 
