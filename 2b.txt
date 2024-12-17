@@ -678,6 +678,16 @@ about:Toggle("脚本框架变小一点", "", false, function(state)
         game:GetService("CoreGui")["frosty"]:Destroy()
     end)
 
+local about = UITab1:section("『黄色动作😍』",true)
+about:Button("撸官（只有r15能用）",function()
+loadstring(game:HttpGet("https://pastefy.app/YZoglOyJ/raw"))()
+end)
+
+
+about:Button("撸官（只有r6能用）",function()
+loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))()
+end)
+
 local about = UITab1:section("『之后的不排了』",true)
 
 about:Button("骂人不封号",function()
