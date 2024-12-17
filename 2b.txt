@@ -2,16 +2,6 @@ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/
  local Notify = Notification.Notify;
 
  Notify({
-		 Description = "欢迎使用羊脚本!";
-		 Title = "羊脚本";
-		 Duration = 10;
-		 
-});
-
-local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/FD2Team/archive/main/notificationtest"))();
- local Notify = Notification.Notify;
-
- Notify({
 		 Description = "脚本永久免费要是收费就是被骗!";
 		 Title = "提示";
 		 Duration = 10;
