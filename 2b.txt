@@ -1,12 +1,38 @@
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/FD2Team/archive/main/notificationtest"))();
- local Notify = Notification.Notify;
+local Notify = Notification.Notify;
 
  Notify({
-		 Description = "脚本永久免费要是收费就是被骗!";
-		 Title = "提示";
+		 Description = "欢迎使用羊脚本";
+		 Title = "yzc";
 		 Duration = 10;
 		 
 });
+ wait(2)
+
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/FD2Team/archive/main/notificationtest"))();
+local Notify = Notification.Notify;
+
+ Notify({
+		 Description = "要钱就是被骗";
+		 Title = "脚本永久免费";
+		 Duration = 10;
+		 
+});
+ wait(2)
+
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/FD2Team/archive/main/notificationtest"))();
+local Notify = Notification.Notify;
+
+ Notify({
+		 Description = "292585170";
+		 Title = "yzcQQ:";
+		 Duration = 10;
+		 
+});
+ wait(2)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="脚本运行成功祝你愉快"; Duration = 4; })
+ wait(1)
 
 local LBLG = Instance.new("ScreenGui", getParent)
 local LBL = Instance.new("TextLabel", getParent)
@@ -48,11 +74,6 @@ local function HeartbeatUpdate()
 end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
-game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="yzcsb♧"; Duration = 2; })
-game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="欢迎使用♣"; Duration = 4; })
-game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="3"; Duration = 4; })
-game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="2"; Duration = 4; })
-game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="1"; Duration = 4; })
 
  -- Gui to Lua 
  -- Version: 3.2 
