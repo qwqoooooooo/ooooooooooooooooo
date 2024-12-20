@@ -26,12 +26,19 @@ local Notify = Notification.Notify;
  Notify({
 		 Description = "292585170";
 		 Title = "yzcQQ:";
-		 Duration = 10;
+		 Duration = 18;
 		 
 });
  wait(2)
 
-game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="脚本运行成功祝你愉快"; Duration = 4; })
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="作者周末全天在线"; Icon = "rbxassetid://18107430261"; Duration = 4; })
+ wait(2)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="欢迎大家找作者提意见"; Icon = "rbxassetid://18107430261"; Duration = 4; })
+ wait(2)
+
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="脚本加载成功祝你愉快"; Icon = "rbxassetid://18107430261"; Duration = 4; })
  wait(1)
 
 local LBLG = Instance.new("ScreenGui", getParent)
