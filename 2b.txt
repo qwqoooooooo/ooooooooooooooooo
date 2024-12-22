@@ -1118,7 +1118,7 @@ local epoh1 = CFrame.new(-442080, 4, 4)--3
 local epoh2 = game:GetService('Players')
 local epoh3 = epoh2.LocalPlayer.Character.HumanoidRootPart
 epoh3.CFrame = epoh1
-end
+end)
 
 local about = UITab1:section("『快速变成其他阵容』",true)
 
