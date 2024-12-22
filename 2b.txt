@@ -990,7 +990,6 @@ about:Button("操人", function()
 loadstring(game:HttpGet("https://pastefy.app/K5nDLsqA/raw",true))()
 end)
 
-end)
 about:Button("FE变玩家", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/XR4sGcgJ"))()
 end)
