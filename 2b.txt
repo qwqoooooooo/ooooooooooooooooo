@@ -2083,31 +2083,6 @@ about:Button("南极点", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10940.6982421875, 548.9979858398438, 16.84609031677246)
 end)
 
-local UITab87 = win:Tab("吃掉世界",'16060333448')
-
-local about = UITab87:section("『LENG Script』",true)
-
-about:Toggle("自动吃", "", false, function(state)
-    if state then
-        while state do
-            game:GetService("Players").LocalPlayer.Character.Events.Eat:FireServer()
-            wait()
-            end
-        end
-end)
-about:Toggle("自动抓", "", false, function(state)
-    if state then
-        while state do
-            local args = {
-    [1] = false,
-    [2] = false
-}
-game:GetService("Players").LocalPlayer.Character.Events.Grab:FireServer(unpack(args))
-            wait()
-            end
-        end
-end)
-
 local UITab1 = win:Tab("颜色或者死亡",'16060333448')
 
 local about = UITab1:section("『LENG Script』",true)
