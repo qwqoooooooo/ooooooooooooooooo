@@ -1093,33 +1093,6 @@ end
 end
 end)
 
-about:Toggle("自动挂机","Toggle",false,function(Value)
-    Afk1 = Value
-        if Afk1 then
-            Afk2()
-        end
-    end    
-})
-
-Afk2 = function()
-while Afk1 do
-wait(0.2)
-local epoh1 = CFrame.new(-442040, 4, 4)--1
-local epoh2 = game:GetService('Players')
-local epoh3 = epoh2.LocalPlayer.Character.HumanoidRootPart
-epoh3.CFrame = epoh1
-wait(0.2)
-local epoh1 = CFrame.new(-442060, 4, 4)--2
-local epoh2 = game:GetService('Players')
-local epoh3 = epoh2.LocalPlayer.Character.HumanoidRootPart
-epoh3.CFrame = epoh1
-wait(0.2)
-local epoh1 = CFrame.new(-442080, 4, 4)--3
-local epoh2 = game:GetService('Players')
-local epoh3 = epoh2.LocalPlayer.Character.HumanoidRootPart
-epoh3.CFrame = epoh1
-end)
-
 local about = UITab1:section("『快速变成其他阵容』",true)
 
 about:Button("变成警察",function()
@@ -1132,7 +1105,6 @@ end)
 
 about:Button("变成罪犯",function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-976.125183, 109.123924, 2059.99536)
-    end
 end)
 
 local about = UITab1:section("『传送』",true)
