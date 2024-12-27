@@ -472,6 +472,10 @@ game:GetService("RunService").Heartbeat:wait();
 end
 game:GetService("ReplicatedStorage").Events.Ungrab:FireServer(v.Part,{})
 
+local dropdown = about:Dropdown("选择玩家名称",'Dropdown',bai.dropdown,function(v)
+    bai.playernamedied = v
+end)
+
 about:Button("传送到玩家旁边", function()
     local HumRoot = game.Players.LocalPlayer.Character.HumanoidRootPart
     local tp_player = game.Players:FindFirstChild(playernamedied)
