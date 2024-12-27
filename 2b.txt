@@ -202,7 +202,6 @@ loadstring(game:HttpGet("https://rentry.co/n55gmtpi/raw", true))()
 end)
 
 local about = UITab1:section("『选择区』",true)
-
 local a=tostring(game.Players.LocalPlayer.Character)
 local lp=game.Players.LocalPlayer
 local bai={
@@ -471,6 +470,35 @@ game:GetService("ReplicatedStorage").Events.Grab:InvokeServer(v.Part,{})
 game:GetService("RunService").Heartbeat:wait();
 end
 game:GetService("ReplicatedStorage").Events.Ungrab:FireServer(v.Part,{})
+
+end
+end
+end
+function gsw()
+    local best = nil
+for i,v in pairs(game:GetService("Workspace").Plots:GetChildren()) do
+if v:FindFirstChild("Owner") and v.Owner.Value == lp then
+	for i,f in pairs(v.Objects:GetChildren()) do
+    if f:FindFirstChild("Conveyor")  then
+		 best=f.Conveyor.Conv.Line.CFrame
+  end
+   end
+		end
+ end
+    return best
+end
+local function lg(value)
+    if value then 
+        local light = Instance.new('PointLight', lp.Character.Head)
+        light.Name='bai'
+        light.Range = 500
+        light.Brightness = 5
+    else
+        pcall(function()
+           lp.Character.Head.bai:remove();
+        end);
+    end;
+end;
 
 local dropdown = about:Dropdown("选择玩家名称",'Dropdown',bai.dropdown,function(v)
     bai.playernamedied = v
