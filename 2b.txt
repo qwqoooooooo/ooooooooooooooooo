@@ -1,35 +1,31 @@
-local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/FD2Team/archive/main/notificationtest"))();
-local Notify = Notification.Notify;
+local msg = Instance.new("Message",workspace)
+msg.Text = "欢迎使用羊脚本"
+wait(2)
+msg:Destroy()
 
- Notify({
-		 Description = "欢迎使用羊脚本";
-		 Title = "yzc";
-		 Duration = 10;
-		 
-});
- wait(2)
+local msg = Instance.new("Message",workspace)
+msg.Text = "脚本永久免费"
+wait(2)
+msg:Destroy()
 
-local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/FD2Team/archive/main/notificationtest"))();
-local Notify = Notification.Notify;
+local msg = Instance.new("Message",workspace)
+msg.Text = "要钱就是被骗"
+wait(2)
+msg:Destroy()
 
- Notify({
-		 Description = "要钱就是被骗";
-		 Title = "脚本永久免费";
-		 Duration = 10;
-		 
-});
- wait(2)
+local msg = Instance.new("Message",workspace)
+msg.Text = "小羊yzcqq号"
+wait(2)
+msg:Destroy()
 
-local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/FD2Team/archive/main/notificationtest"))();
-local Notify = Notification.Notify;
+local msg = Instance.new("Message",workspace)
+msg.Text = "292585170"
+wait(2)
+msg:Destroy()
 
- Notify({
-		 Description = "292585170";
-		 Title = "yzcQQ:";
-		 Duration = 18;
-		 
-});
- wait(2)
+if getgenv().ED_AntiKick then
+	return
+end
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="作者周末全天在线"; Icon = "rbxassetid://18107430261"; Duration = 4; })
  wait(2)
@@ -40,6 +36,16 @@ game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『羊脚本』"; Text ="脚本加载成功祝你愉快"; Icon = "rbxassetid://18107430261"; Duration = 4; })
  wait(1)
+
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/FD2Team/archive/main/notificationtest"))();
+local Notify = Notification.Notify;
+
+ Notify({
+		 Description = "谢谢支持";
+		 Title = "感谢使用";
+		 Duration = 10;
+		 
+});
 
 local LBLG = Instance.new("ScreenGui", getParent)
 local LBL = Instance.new("TextLabel", getParent)
