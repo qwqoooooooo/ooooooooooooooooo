@@ -534,10 +534,8 @@ end)
 about:Toggle("查看玩家", 'Toggleflag', false, function(state)
     if state then
         game:GetService('Workspace').CurrentCamera.CameraSubject =
-            game:GetService('Players'):FindFirstChild(playernamedied).Character.Humanoid
-            Notify("小羊", "已开启", "rbxassetid://", 5)
+            game:GetService('Players'):FindFirstChild(bin.playernamedied).Character.Humanoid
     else
-        Notify("小羊", "已关闭", "rbxassetid://", 5)
         local lp = game.Players.LocalPlayer
         game:GetService('Workspace').CurrentCamera.CameraSubject = lp.Character.Humanoid
     end
