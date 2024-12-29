@@ -1569,6 +1569,618 @@ about:Button("被遗弃的海岸",function()
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2487.307373046875, 133.25001525878906, 1557.308837890625)      
 end)
 
+local UITab1 = win:Tab("『小羊火箭发射模拟器』",'7734068321')
+
+local about = UITab1:section("『主要』",true)
+
+about:Button("一键重生", function()
+if false then
+getgenv().lishichuan="1001390385" loadstring(game:HttpGet("https://pastebin.com/raw/iZuasZCc"))()
+else
+local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 2
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 3
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 4
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 5
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 6
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 7
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 8
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 9
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 10
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 11
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 12
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 13
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 14
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 15
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 16
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 17
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 18
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 19
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = 20
+}
+
+game:GetService("ReplicatedStorage").Promote:FireServer(unpack(args))
+end
+end)
+
+about:Toggle("自动收集燃料", "ARL", false, function(ARL)
+    isFuelScoopEnabled = ARL while true do wait() if isFuelScoopEnabled then for i, h in pairs(game.Players.LocalPlayer.Character:GetChildren()) do if h:IsA("Tool") and h.Name == "FuelScoop" then h:Activate() end end end end
+end)
+about:Button("登上火箭", function()
+    game:GetService("ReplicatedStorage"):WaitForChild("BoardRocket"):FireServer()
+end)
+about:Button("将玩家从所有者座位移除", function()
+    game:GetService("ReplicatedStorage"):WaitForChild("RemovePlayer"):FireServer()
+end)
+local about = UITab1:section("『传送』",true)
+
+about:Button("发射台岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-123.15931701660156, 2.7371432781219482, 3.491959810256958)
+end)
+about:Button("白云岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(40.875667572021484, 215.58982849121094, -7.767969131469727)
+end)
+about:Button("浮漂岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5.420750141143799, 806.5896606445312, -0.9174990653991699)
+end)
+about:Button("卫星岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5.363829135894775, 1430.0894775390625, 3.0943634510040283)
+end)
+about:Button("蜜蜂迷宫岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.5361199378967285, 3130.955810546875, -29.759048461914062)
+end)
+about:Button("月球人救援", function()
+if true then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.674766540527344, 5016.04833984375, 24.195322036743164)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(57.22633743286133, 5016.04833984375, 68.154541015625)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(14.319995880126953, 5016.04833984375, 104.08940887451172)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8.97511100769043, 5027.5048828125, 68.9089126586914)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(50.833763122558594, 5019.53271484375, -1.971453309059143)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(38.80512619018555, 5016.30029296875, -3.6888654232025146)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(26.939655303955078, 5016.04833984375, -50.962989807128906)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.178976535797119, 5016.14208984375, -88.48883056640625)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-54.15913772583008, 5016.3935546875, -76.68660736083984)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.78336334228516, 5017.23974609375, -72.92344665527344)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.37419128417969, 5016.04833984375, -26.02095603942871)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5.2777814865112305, 5016.04833984375, 37.0465202331543)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(84.11971282958984, 5043.10986328125, 31.679494857788086)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(103.51252746582031, 5016.04833984375, -27.85248374938965)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37.93146896362305, 5016.04833984375, 82.4258041381836)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-99.00713348388672, 5016.04833984375, -23.620258331298828)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-105.41523742675781, 5016.04833984375, 8.819246292114258)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-80.40470123291016, 5016.04833984375, 37.81985855102539)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-30.209091186523438, 5016.04833984375, 86.0169677734375)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8.21000862121582, 5027.60693359375, 69.36924743652344)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-79.7208251953125, 5016.04833984375, 37.51082992553711)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-105.82766723632812, 5016.04833984375, 10.035401344299316)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(56.944759368896484, 5016.04833984375, 69.8060073852539)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.11783981323242, 5016.04833984375, 23.115154266357422)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.656553268432617, 5016.04833984375, -53.43852996826172)
+wait(0.5)
+end
+end)
+about:Button("暗物质岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(68.43186950683594, 6851.94091796875, 7.890637397766113)
+end)
+about:Button("太空岩石岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.499502658843994, 8622.4404296875, -7.288844108581543)
+end)
+about:Button("零号火星岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(54.44503402709961, 11270.0927734375, -1.273137092590332)
+end)
+about:Button("太空水晶小行星岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11.579089164733887, 15295.6318359375, -27.54974365234375)
+end)
+about:Button("月球浆果岛", function()
+if true then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.925741195678711, 18410.66796875, -7.67368745803833)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13.611266136169434, 18400.90625, -21.917606353759766)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8.736181259155273, 18386.873046875, -52.68754959106445)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-30.07678985595703, 18385.2734375, -69.74903106689453)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-41.2056884765625, 18398.689453125, -79.05440521240234)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4.792638778686523, 18380.564453125, -80.39723205566406)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.430290699005127, 18364.451171875, -98.68985748291016)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(47.405582427978516, 18396.216796875, 11.345914840698242)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37.91355895996094, 18396.5703125, 32.808624267578125)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.957651615142822, 18397.009765625, 62.3068733215332)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-23.505695343017578, 18396.716796875, 85.37486267089844)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-33.842193603515625, 18391.732421875, 91.92649841308594)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.94742202758789, 18386.404296875, 92.4217758178711)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-52.636714935302734, 18364.451171875, 73.5390396118164)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(43.521812438964844, 18395.80859375, 92.0239028930664)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(69.0108871459961, 18388.4296875, 92.24237823486328)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(36.44295120239258, 18395.947265625, 31.95819091796875)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(46.901939392089844, 18396.642578125, 11.963659286499023)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(91.22152709960938, 18372.787109375, 22.870759963989258)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.8456802368164, 18378.384765625, -21.381427764892578)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(107.07869720458984, 18364.451171875, -43.02503204345703)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29.661314010620117, 18385.248046875, -69.60186004638672)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-41.890499114990234, 18399.0703125, -81.40625)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-56.74502182006836, 18403.3046875, -18.413867950439453)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9.87978458404541, 18410.66796875, 1.4432036876678467)
+end
+end)
+about:Button("铺路石岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.16077114641666412, 22539.201171875, -78.34783172607422)
+end)
+about:Button("流星岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-45.515689849853516, 27961.560546875, -7.358333110809326)
+end)
+about:Button("升级岛", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2.7595248222351074, 33959.98828125, 53.93095397949219)
+end)
+
+local UITab2 = win:Tab("『火箭远程购买』",'7734068321')
+
+local about = UITab2:section("『火箭发射模拟器』",true)
+
+about:Button("英勇", function()
+local args = {
+    [1] = "Rocket",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").BuyRocket:InvokeServer(unpack(args))
+end)
+
+about:Button("加成英勇", function()
+local args = {
+    [1] = "Rocket",
+    [2] = 2
+}
+
+game:GetService("ReplicatedStorage").BuyRocket:InvokeServer(unpack(args))
+end)
+
+about:Button("火刃", function()
+local args = {
+    [1] = "Rocket",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").BuyRocket:InvokeServer(unpack(args))
+end)
+
+about:Button("加成火刃", function()
+local args = {
+    [1] = "Rocket",
+    [2] = 4
+}
+
+game:GetService("ReplicatedStorage").BuyRocket:InvokeServer(unpack(args))
+end)
+
+about:Button("阿特拉斯", function()
+local args = {
+    [1] = "Rocket",
+    [2] = 5
+}
+
+game:GetService("ReplicatedStorage").BuyRocket:InvokeServer(unpack(args))
+end)
+
+about:Button("普罗米修斯", function()
+local args = {
+    [1] = "Rocket",
+    [2] = 6
+}
+
+game:GetService("ReplicatedStorage").BuyRocket:InvokeServer(unpack(args))
+end)
+
+about:Button("双重阿特拉斯", function()
+local args = {
+    [1] = "Rocket",
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").BuyRocket:InvokeServer(unpack(args))
+end)
+
+about:Button("寻星者", function()
+local args = {
+    [1] = "Rocket",
+    [2] = 8
+}
+
+game:GetService("ReplicatedStorage").BuyRocket:InvokeServer(unpack(args))
+end)
+
+about:Button("天空龙", function()
+local args = {
+    [1] = "Rocket",
+    [2] = 9
+}
+
+game:GetService("ReplicatedStorage").BuyRocket:InvokeServer(unpack(args))
+end)
+
+about:Button("强化天空龙", function()
+local args = {
+    [1] = "Rocket",
+    [2] = 10
+}
+
+game:GetService("ReplicatedStorage").BuyRocket:InvokeServer(unpack(args))
+end)
+
+local UITab3 = win:Tab("『背包远程购买』",'7734068321')
+
+local about = UITab3:section("『火箭发射模拟器』",true)
+
+about:Button("双重", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("压缩罐", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 2
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("原子压缩罐", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("大型压缩罐", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("大型原子压缩罐", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 4
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("燃料棒", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 5
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("火箭背包", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 6
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("双重火箭背包", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("胖胖火箭背包", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 8
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("双重胖胖火箭背包", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 9
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("绿色水晶背包", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 10
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("红色水晶背包", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 11
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+about:Button("蓝色水晶背包", function()
+local args = {
+    [1] = "Backpack",
+    [2] = 12
+}
+
+game:GetService("ReplicatedStorage").BuyItem:InvokeServer(unpack(args))
+end)
+
+local UITab5 = win:Tab("『燃料采集产远程购买』",'7734068321')
+
+local about = UITab5:section("『火箭发射模拟器』",true)
+
+about:Button("标准燃料采集铲", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
+about:Button("新燃料采集铲", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 2
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
+about:Button("电动燃料采集铲", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
+about:Button("数字燃料采集铲", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 4
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
+about:Button("人工智能燃料采集器", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 5
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
+about:Button("采矿激光", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 6
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
+about:Button("红宝石采矿激光", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
+about:Button("霓虹采矿激光", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 8
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
+about:Button("太空水晶采矿激光", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 9
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
+about:Button("绿色水晶激光", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 10
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
+about:Button("红色水晶激光", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 11
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
+about:Button("蓝色水晶激光", function()
+local args = {
+    [1] = "FuelScoop",
+    [2] = 12
+}
+
+game:GetService("ReplicatedStorage").BuyFuelScoop:InvokeServer(unpack(args))
+end)
+
 local UITab1 = win:Tab("『巴掌』",'7734068321')
  
 local about = UITab1:section("『小羊巴掌』",true)
