@@ -1305,6 +1305,249 @@ about:Button("力量传奇改力量",function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/jynzl/main/main/Musclas%20Legenos.lua'))()
 end)
 
+local UITab1 = win:Tab("『小羊fisch鱼』",'7734068321')
+
+local about = UITab1:section("主要",true)
+
+about:Toggle("小羊研发（自动甩干/自动点击/秒掉/有点bug会乱点请谅解","Toggle",false,function(value)
+   autoFishingEnabled = value
+
+        local config = {
+            fpsCap = 9999,
+            enableBigButton = true,        
+            bigButtonScaleFactor = 0.7,     
+            shakeSpeed = 0.01,           
+            FreezeWhileFishing = true      
+        }
+
+        setfpscap(config.fpsCap)
+
+        local players = game:GetService("Players")
+        local vim = game:GetService("VirtualInputManager")
+        local run_service = game:GetService("RunService")
+        local replicated_storage = game:GetService("ReplicatedStorage")
+        local localplayer = players.LocalPlayer
+        local playergui = localplayer.PlayerGui
+
+        local utility = {blacklisted_attachments = {"bob", "bodyweld"}}
+        local fishingThread  
+
+        function utility.simulate_click(x, y, mb)
+            vim:SendMouseButtonEvent(x, y, (mb - 1), true, game, 1)
+            vim:SendMouseButtonEvent(x, y, (mb - 1), false, game, 1)
+        end
+
+        function utility.move_fix(bobber)
+            for _, value in bobber:GetDescendants() do
+                if (value.ClassName == "Attachment" and table.find(utility.blacklisted_attachments, value.Name)) then
+                    value:Destroy()
+                end
+            end
+        end
+
+        local farm = {reel_tick = nil, cast_tick = nil}
+
+        function farm.find_rod()
+            local character = localplayer.Character
+            if not character then return nil end
+
+            for _, tool in ipairs(character:GetChildren()) do
+                if tool:IsA("Tool") and (tool.Name:find("rod") or tool.Name:find("Rod")) then
+                    return tool
+                end
+            end
+            return nil
+        end
+
+        function farm.freeze_character(freeze)
+            local character = localplayer.Character
+            if character then
+                local humanoid = character:FindFirstChildOfClass("Humanoid")
+                if humanoid then
+                    if freeze then
+                        humanoid.WalkSpeed = 0
+                        humanoid.JumpPower = 0
+                    else
+                        humanoid.WalkSpeed = 16  
+                        humanoid.JumpPower = 50  
+                    end
+                end
+            end
+        end
+
+        function farm.cast()
+            local character = localplayer.Character
+            if not character then return end
+
+            local rod = farm.find_rod()
+            if not rod then return end
+
+            local args = { [1] = 100, [2] = 1 }
+            rod.events.cast:FireServer(unpack(args))
+            farm.cast_tick = 0  
+        end
+
+        function farm.shake()
+            local shake_ui = playergui:FindFirstChild("shakeui")
+            if shake_ui then
+                local safezone = shake_ui:FindFirstChild("safezone")
+                local button = safezone and safezone:FindFirstChild("button")
+
+                if button then
+                    if config.enableBigButton then
+                        button.Size = UDim2.new(config.bigButtonScaleFactor, 0, config.bigButtonScaleFactor, 0)
+                    else
+                        button.Size = UDim2.new(1, 0, 1, 0)  
+                    end
+
+                    if button.Visible then
+                        utility.simulate_click(
+                            button.AbsolutePosition.X + button.AbsoluteSize.X / 2,
+                            button.AbsolutePosition.Y + button.AbsoluteSize.Y / 2,
+                            1
+                        )
+                    end
+                end
+            end
+        end
+
+        function farm.reel()
+            local reel_ui = playergui:FindFirstChild("reel")
+            if not reel_ui then return end
+
+            local reel_bar = reel_ui:FindFirstChild("bar")
+            if not reel_bar then return end
+
+            local reel_client = reel_bar:FindFirstChild("reel")
+            if not reel_client then return end
+
+            if reel_client.Disabled == true then
+                reel_client.Disabled = false
+            end
+
+            local update_colors = getsenv(reel_client).UpdateColors
+
+            if update_colors then
+                setupvalue(update_colors, 1, 100)
+                replicated_storage.events.reelfinished:FireServer(getupvalue(update_colors, 1), true)
+            end
+        end
+
+       
+        fishingThread = spawn(function()
+            while autoFishingEnabled do
+                if not autoFishingEnabled then return end  
+
+                local rod = farm.find_rod() 
+                if rod then
+                    if config.FreezeWhileFishing then
+                        farm.freeze_character(true)
+                    end
+                    farm.cast()
+                    farm.shake()
+                    farm.reel()
+                else
+                    farm.freeze_character(false)
+                end
+
+                task.wait(config.shakeSpeed)  
+            end
+
+           
+            farm.freeze_character(false)
+        end)
+
+       
+        local function cleanup()
+            if fishingThread then
+                task.cancel(fishingThread)  
+                fishingThread = nil
+            end
+            farm.freeze_character(false)  
+        end
+
+        
+        if not autoFishingEnabled then
+            cleanup()
+        end
+
+local Players = game:GetService("Players")
+local GuiService = game:GetService("GuiService")
+local VirtualInputManager = game:GetService("VirtualInputManager")
+local player = Players.LocalPlayer
+local gui = player:WaitForChild("PlayerGui")
+
+local function clickButton(button)
+    GuiService.SelectedObject = button
+    VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Return, false, game)
+    VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Return, false, game)
+end
+
+local function setupButtonListener()
+    gui.DescendantAdded:Connect(function(descendant)
+        if descendant.Name == "button" and 
+           descendant.Parent and 
+           descendant.Parent.Name == "safezone" and
+           descendant.Parent.Parent and 
+           descendant.Parent.Parent.Name == "shakeui" then
+            task.spawn(function()
+                while descendant and descendant.Parent do
+                    clickButton(descendant)
+                    task.wait()
+                end
+            end)
+        end
+    end)
+    
+    for _, descendant in ipairs(gui:GetDescendants()) do
+        if descendant.Name == "button" and 
+           descendant.Parent and 
+           descendant.Parent.Name == "safezone" and
+           descendant.Parent.Parent and 
+           descendant.Parent.Parent.Name == "shakeui" then
+            task.spawn(function()
+                while descendant and descendant.Parent do
+                    clickButton(descendant)
+                    task.wait()
+                end
+            end)
+        end
+    end
+end
+
+setupButtonListener()
+    end)
+
+local about = UITab1:section("传送功能", true)  
+  
+about:Button("出生点",function() 
+                       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(321.46282958984375, 133.61595153808594, 268.07733154296875)      
+end)
+    
+about:Button("罗斯利特湾",function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1460.9500732421875, 135, 713.5816040039062)      
+end)  
+    
+about:Button("雪帽岛",function() 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2617.611572265625, 135.2838592529297, 2383.6240234375)      
+end)  
+    
+about:Button("蘑菇树林沼泽地",function() 
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2437.77734375, 131.98326110839844, -694.20751953125)      
+end)  
+   
+about:Button("阳光石岛",function() 
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-918.2618408203125, 134.39625549316406, -1118.9036865234375)      
+end) 
+    
+about:Button("特拉平岛",function() 
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-171.90907287597656, 143.47268676757812, 1941.3590087890625)      
+end)   
+    
+about:Button("被遗弃的海岸",function() 
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2487.307373046875, 133.25001525878906, 1557.308837890625)      
+end)
+
 local UITab1 = win:Tab("『巴掌』",'7734068321')
  
 local about = UITab1:section("『小羊巴掌』",true)
