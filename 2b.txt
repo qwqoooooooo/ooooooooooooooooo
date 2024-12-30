@@ -97,7 +97,7 @@ Heartbeat:Connect(HeartbeatUpdate)
  
  --Properties:
 
-local ui = loadstring(game:HttpGet("https://pastebin.com/raw/Z4yW42iP"))()
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/qwqoooooooo/Bbxshsxybwshbwshbuhbswxhbwsxhbwxshbysbybsxybws/refs/heads/main/He’s%20hi%20sound%20wiubwdbihiwbh%20imbed%20bihwdcbhidcihbdwcbyi"))()
 local win = ui:new("羊脚本proMax")
 
 local UITab1 = win:Tab("『公告』",'7734068321')
