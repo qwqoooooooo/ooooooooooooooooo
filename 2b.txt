@@ -179,6 +179,25 @@ about:Slider('缩放焦距(正常70)!', 'Sliderflag', 70, 0.1, 250, false, funct
         game.Workspace.CurrentCamera.FieldOfView = v
 end)
 
+about:Textbox("快速跑步(推荐调2)", "tpwalking", "输入", function(king)
+local tspeed = king
+local hb = game:GetService("RunService").Heartbeat
+local tpwalking = true
+local player = game:GetService("Players")
+local lplr = player.LocalPlayer
+local chr = lplr.Character
+local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
+while tpwalking and hb:Wait() and chr and hum and hum.Parent do
+  if hum.MoveDirection.Magnitude > 0 then
+    if tspeed then
+      chr:TranslateBy(hum.MoveDirection * tonumber(tspeed))
+    else
+      chr:TranslateBy(hum.MoveDirection)
+    end
+  end
+end
+end)
+
 local about = UITab1:section("『飞行区』",true)
 
 about:Button("小羊飞行",function()
