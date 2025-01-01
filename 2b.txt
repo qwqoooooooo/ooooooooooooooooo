@@ -1629,6 +1629,7 @@ RunService.PreSimulation:Connect(function()
       end
     end
 end)
+end)
 
 local UITab1 = win:Tab("『小羊火箭发射模拟器』",'7734068321')
 
